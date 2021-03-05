@@ -72,6 +72,12 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 16px;
+  width: 65%;
+  margin: 0 auto;
+
+  > * {
+    width: 100%;
+  }
 }
 
 .notice,
@@ -127,11 +133,11 @@ a {
   }
 
   .btn-primary {
-    width: 100%;
+    width: 25%;
   }
 
   .btn-secondary {
-    width: 30%;
+    width: 25%;
     margin-left: 70%;
   }
 }
@@ -156,31 +162,35 @@ form {
       background-color: $primary-color-light;
     }
 
-    .actions {
-      display: flex;
-      justify-content: center;
-      margin: 8px 0;
-    }
+    input[type="checkbox"] {
+      width: auto;
 
-    input[type="submit"] {
-      padding: 8px;
-      width: 50%;
-      border: none;
-      border-radius: 4px;
-      background-color: $primary-color-dark;
-      color: $primary-color-light;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin: 8px 0;
+      }
 
-    input[type="submit"]:hover {
-      background-color: $primary-color;
-      color: #fff;
-    }
-
-    .actions.reset {
       input[type="submit"] {
-        width: 100%;
+        padding: 8px;
+        width: 50%;
+        border: none;
+        border-radius: 4px;
+        background-color: $primary-color-dark;
+        color: $primary-color-light;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+
+      input[type="submit"]:hover {
+        background-color: $primary-color;
+        color: #fff;
+      }
+
+      .actions.reset {
+        input[type="submit"] {
+          width: 100%;
+        }
       }
     }
   }

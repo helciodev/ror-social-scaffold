@@ -1,28 +1,38 @@
-# Scaffold for social media app with Ruby on Rails
+# Social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+This is an app built with the fundamentals of any CRUD application.
+A user can only see and can create posts if logged in.
+A user can send, accept or reject friend requests.
 
 ## Built With
 
-- Ruby v2.7.0
+- Ruby v2.7.2
 - Ruby on Rails v5.2.4
+- Bootstrap gem
 
 ## Live Demo
 
 TBA to be added
 
-
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
+Ruby: 2.6.3 >=
+Rails: 5.2.3 >=
 Postgres: >=9.5
 
 ### Setup
+
+Initialize Repository
+
+```
+Navigate to the directory where you want this project to live and then clone it `git clone git@github.com:helciodev/ror-social-scaffold.git`.
+
+Navigate to the `ror-social-scaffold` directory
+```
 
 Instal gems with:
 
@@ -37,15 +47,11 @@ Setup database with:
    rails db:migrate
 ```
 
-### Github Actions
+### Features for this project
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
+1. A navbar for easy navigation.
+2. A list of posts ordered by most recent.
+3. Friendship functionality between users.
 
 ### Usage
 
@@ -63,7 +69,7 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+TBA
 
 ### Deployment
 
@@ -82,12 +88,11 @@ TBA
 - GitHub: [@wandji20](https://github.com/wandji20)
 - LinkedIn: [Wandji Bertrand](https://www.linkedin.com/in/wandji-bertrand/)
 
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+TBA.
 
 ## Show your support
 
@@ -98,3 +103,5 @@ Give a ⭐️ if you like this project!
 TBA
 
 ## 📝 License
+
+TBA

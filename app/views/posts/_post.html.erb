@@ -6,6 +6,9 @@
     <div class='post-liking'>
       <span class='post-date'> <%= post.created_at.strftime("%Y/%m/%d") %> </span>
       <%= like_or_dislike_btn(post) %>
+    
+        <span class="badge bg-primary round"><%= post_counts(post)%></span>
+      
     </div>
   </div>
   <p class="post-content">
@@ -20,4 +23,5 @@
       <%= form.submit 'Comment', class: 'btn btn-secondary' %>
     <% end %>
   </div>
-</li>
+</li> 
+  
