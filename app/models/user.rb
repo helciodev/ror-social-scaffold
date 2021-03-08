@@ -15,11 +15,4 @@ class User < ApplicationRecord
 
   has_many :pending_friendships, -> { where status: false }, class_name: "Friendship", foreign_key: 'friend_id'
   has_many :pending_friends, through: 'pending_friendships', source: 'user'
-
-
-  def all_friends
-    @inverse_friends = inverse_friendships.confirmed.map(&:user)
-    @friends = friendships.confirmed.map(&:friend)
-    (@inverse_friends + @friends).compact
-  end
 end
