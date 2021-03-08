@@ -3,7 +3,7 @@
     <div class="col-md-4">
       <h2>Pending Friendships</h2>
       <div>
-          <% @pending_friendships.unconfirmed.each do |friendship| %>
+          <% @pending_friendships.each do |friendship| %>
             <p class="lead"> From <%= friendship.user.name %></p>
             <p> 
               <span>
@@ -21,7 +21,7 @@
         <h2 class="text-center">Friends list</h2>
         <div>
           <ul>
-            <% current_user.all_friends.each do |friend| %>
+            <% @friends.each do |friend| %>
               <li><%= link_to "#{friend.name}", user_path(friend), class:'btn btn-success w-100 mt-4' %></li>
             <% end %>
           </ul>

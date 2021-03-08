@@ -1,8 +1,7 @@
 module UserHelper
-  def friend(user)
-    current_user.friendships.where('friend_id = ?', user.id)
-      .or(current_user.inverse_friendships.where('user_id = ?', user.id))
-  end
+  # def friend
+  #   current_user.confirmed_friendships
+  # end
 
   def confirmed_friend(user)
     friendship = friend(user)
@@ -12,6 +11,8 @@ module UserHelper
   def invite_friendship(user)
     link = link_to('Invite to friendship', friendships_path(friend_id: user),
                    method: :post, class: 'btn btn-info w-25')
-    link if friend(user).count.zero?
+    link if !current_user.pending_friends.include?(user) && !current_user.friends.include?(user) && !current_user.unconfirmed_friends
   end
 end
+
+# link should show if user is not friend with user on the list or if he has a pending request from  user in  the list

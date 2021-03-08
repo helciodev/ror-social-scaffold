@@ -3,8 +3,8 @@ class FriendshipsController < ApplicationController
 
   def create
     @friendship = current_user.friendships.find_by_friend_id(params[:friend_id])
-    @inverse_friendship = current_user.inverse_friendships.find_by_user_id(params[:friend_id])
-    if !(@friendship || @inverse_friendship)
+    @pending_friendship = current_user.pending_friendships.find_by_user_id(params[:friend_id])
+    if !(@friendship || @pending_friendship)
       @friendship = current_user.friendships.build(friend_id: params[:friend_id])
       if @friendship.save
         redirect_to users_path,
