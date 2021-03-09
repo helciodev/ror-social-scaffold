@@ -3,41 +3,15 @@
     <div class="col-md-4">
       <h2>Pending Friendships</h2>
       <div>
-          <% @pending_friendships.each do |friendship| %>
-            <p class="lead"> From <%= friendship.user.name %></p>
-            <p> 
-              <span>
-              <%= link_to 'Accept', friendship_path(friendship_id: friendship), class:'btn btn-success text-white', method: :put %>
-              </span>
-              <span>
-              <%= link_to 'Reject', friendship_path(friendship_id: friendship), method: :delete, class:'btn btn-danger text-white' %>
-              </span>
-            </p>
-          <% end %>
+        <%= render @pending_friendships %>
       </div>
     </div>
 
-      <div class="col-md-4">
-        <h2 class="text-center">Friends list</h2>
-        <div>
-          <ul>
-            <% @friends.each do |friend| %>
-              <li><%= link_to "#{friend.name}", user_path(friend), class:'btn btn-success w-100 mt-4' %></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    
-
-      <div class="col-md-4">
-        <h2 class="text-center">Sent Friendships</h2>
-        <div>
-          <ul>
-            <% @sent_friendships.each do |friendship| %>
-             <li><%= link_to "#{friendship.friend.name}", user_path(friendship.friend), class:'btn btn-warning w-100' %></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
+    <div class="col-md-4">
+      <h2 class="text-center">Friends list</h2>
+        <ul>
+          <%= render @friends %>
+        </ul>
+    </div>
   </div>
 </div>

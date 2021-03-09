@@ -8,6 +8,6 @@ class Friendship < ApplicationRecord
   scope :unconfirmed, -> { where('status = ? ', false) }
 
   def reverse_friendship
-    Friendship.create(status: true, friend_id: self.user_id, user_id: self.friend_id)
+    Friendship.create(status: true, friend_id: user_id, user_id: friend_id)
   end
 end
