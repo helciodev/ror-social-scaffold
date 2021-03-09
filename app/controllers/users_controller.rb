@@ -7,8 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @pending_friendships = current_user.pending_friendships
-    @sent_friendships = current_user.friendships.unconfirmed
-
     @user = User.find(params[:id])
     @posts = @user.posts.ordered_by_most_recent
     @friends = current_user.friends
