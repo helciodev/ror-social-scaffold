@@ -12,7 +12,7 @@ module UserHelper
 
     if !current_user.pending_friends.include?(user) &&
             !current_user.friends.include?(user) &&
-            !sent_request_to(user)
+            !sent_request_to(user) && user.id != current_user.id
       'friendships/friendship_link'
     else
       'layouts/empty'
