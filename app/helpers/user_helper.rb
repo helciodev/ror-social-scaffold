@@ -9,10 +9,13 @@ module UserHelper
   end
 
   def invite_friendship(user)
-    link = link_to('Invite to friendship', friendships_path(friend_id: user),
-                   method: :post, class: 'btn btn-info w-25')
-    link if !current_user.pending_friends.include?(user) &&
+
+    if !current_user.pending_friends.include?(user) &&
             !current_user.friends.include?(user) &&
             !sent_request_to(user)
+      'friendships/friendship_link'
+    else
+      'layouts/empty'
+    end
   end
 end
