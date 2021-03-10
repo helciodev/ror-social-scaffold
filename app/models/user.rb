@@ -9,14 +9,10 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   has_many :friendships, foreign_key: 'user_id'
-  has_many :friends, class_name: 'User', through: 'friendships'
 
-  has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
-  has_many :inverse_friends, source: 'user', through: 'inverse_friendships'
+  has_many :confirmed_friendships, -> { where status: true }, class_name: 'Friendship'
+  has_many :friends, through: 'confirmed_friendships', class_name: 'User'
 
-  def all_friends
-    @inverse_friends = inverse_friendships.confirmed.map(&:user)
-    @friends = friendships.confirmed.map(&:friend)
-    (@inverse_friends + @friends).compact
-  end
+  has_many :pending_friendships, -> { where status: false }, class_name: 'Friendship', foreign_key: 'friend_id'
+  has_many :pending_friends, through: 'pending_friendships', source: 'user'
 end

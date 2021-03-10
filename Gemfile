@@ -6,7 +6,7 @@ ruby '2.7.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.2.4'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.2'
+# gem 'pg', '~> 1.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
@@ -30,6 +30,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
+
+# production
+group :production do
+  gem 'pg', '1.2.3'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
