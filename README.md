@@ -1,40 +1,37 @@
-# Social media app with Ruby on Rails
+# Scaffold for social media app with Ruby on Rails
 
-This is an app built with the fundamentals of any CRUD application.
-A user can only see and can create posts if logged in.
-A user can send, accept or reject friend requests.
+> This is a social media application where a user can sign up for an account and then can;
+
+- Create posts
+- Like and comment on posts
+- Send friend requests
+- Approve or reject friend requests
+- See profile
 
 ## Built With
 
 - Ruby v2.7.2
 - Ruby on Rails v5.2.4
-- Bootstrap gem
+- Rubocop
+- Vs Code
 
 ## Live Demo
 
-TBA to be added
+[See Live](https://get-in-touch.herokuapp.com)
 
 ## Getting Started
 
-To get a local copy up and running, follow these steps.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3 >=
-Rails: 5.2.3 >=
-Postgres: >=9.5
+1. Ruby: >=2.7.0
+2. Rails: 5.2.4
+3. Postgres: >=9.5
 
 ### Setup
 
-Initialize Repository
-
-```
-Navigate to the directory where you want this project to live and then clone it `git clone git@github.com:helciodev/ror-social-scaffold.git`.
-
-Navigate to the `ror-social-scaffold` directory
-```
-
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
@@ -47,11 +44,14 @@ Setup database with:
    rails db:migrate
 ```
 
-### Features for this project
+### Github Actions
 
-1. A navbar for easy navigation.
-2. A list of posts ordered by most recent.
-3. Friendship functionality between users.
+To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
+
+1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
+2. Create the `feature/branch` and push.
+3. Start working on your milestone as usual.
+4. Open a PR from the `feature/branch` when your work is done.
 
 ### Usage
 
@@ -69,11 +69,22 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-TBA
-
 ### Deployment
 
-TBA
+To deploy the app successfully on heroku follow these steps
+
+1. In your main branch run;
+   ```
+   heroku create
+   ```
+2. Followed by;
+   ```
+   git push heroku main
+   ```
+3. After deployment is successfull, run;
+   ```
+   heroku run rails db:migrate
+   ```
 
 ## Authors
 
@@ -92,16 +103,12 @@ TBA
 
 Contributions, issues and feature requests are welcome!
 
-TBA.
+Feel free to check the [issues page](issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
-
 ## 📝 License
 
-TBA
+[MIT License](./LICENSE)
