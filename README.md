@@ -12,7 +12,7 @@ A user can send, accept or reject friend requests.
 
 ## Live Demo
 
-TBA to be added
+[social-stay-in-touch-w-h](https://social-stay-in-touch-w-h.herokuapp.com/)
 
 ## Getting Started
 
