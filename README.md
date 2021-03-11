@@ -17,7 +17,7 @@
 
 ## Live Demo:
 
-[social-stay-in-touch-w-h](https://social-stay-in-touch-w-h.herokuapp.com/)
+[stayintouch](https://social-stay-in-touch-w-h.herokuapp.com/)
 
 
 ## Getting Started
