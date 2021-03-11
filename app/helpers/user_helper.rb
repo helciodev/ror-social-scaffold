@@ -12,7 +12,7 @@ module UserHelper
     link = link_to 'Invite to friendship', friendships_path(friend_id: user),
                    method: :post, class: 'btn btn-info w-25'
 
-    link if !current_user.pending_friends. include?(user) &&
+    link if !current_user.pending_friends.include?(user) &&
             !current_user.friends.include?(user) &&
             !sent_request_to(user) &&
             user.id != current_user.id
