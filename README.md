@@ -19,7 +19,6 @@
 
 [stayintouch](https://social-stay-in-touch-w-h.herokuapp.com/)
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -86,4 +85,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-[MIT License](./LICENSE)
+[MIT License](./license.txt)
