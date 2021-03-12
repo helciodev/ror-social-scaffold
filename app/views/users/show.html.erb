@@ -1,5 +1,10 @@
 <section class="user-section">
+<div class="w-100 justify-content-space-between">
   <h2><%= "Name: #{@user.name}" %></h2>
+  <div>
+    <%= invite_friendship(@user) %> 
+  </div>
+</div>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
@@ -7,3 +12,4 @@
     </ul>
   </article>
 </section>
+<%= render all_friendship_details(@user) %>
