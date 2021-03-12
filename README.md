@@ -73,12 +73,6 @@ Open `http://localhost:3000/` in your browser.
 - GitHub: [@wandji20](https://github.com/wandji20)
 - LinkedIn: [Wandji Bertrand](https://www.linkedin.com/in/wandji-bertrand/)
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
